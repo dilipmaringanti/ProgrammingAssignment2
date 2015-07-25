@@ -46,3 +46,20 @@ cacheSolve <- function(x, ...) {
 		inverse
 }
 
+## testing
+## > source("cachematrix.R")
+## > x=rbind(c(1,5),c(2,6))
+## > m<-makeCacheMatrix(x)
+## > m$get()
+##     [,1] [,2]
+## [1,]    1    5
+## [2,]    2    6
+## > cacheSolve(m)
+##     [,1]  [,2]
+## [1,] -1.5  1.25
+## [2,]  0.5 -0.25
+## > cacheSolve(m)
+## getting cached data for inverse matrix
+##     [,1]  [,2]
+## [1,] -1.5  1.25
+## [2,]  0.5 -0.25
